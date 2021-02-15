@@ -74,15 +74,15 @@ function Form(props) {
      <form >
     <div className = "form-group" >
     <label for = "Name" > Name </label> 
-    <input type = "text" className = "form-control" onChange = {handleChange} id = "name" name = 'name' placeholder = "Enter Name" value = {newpost.name} required />
+    <input type = "text" className = "form-control" onChange = {handleChange} id = "name" name = 'name' placeholder = "Enter Your Name" value = {newpost.name} required />
     </div> 
     <div class = "form-group" >
     <label for = "caption" > Caption </label> 
-    <input type = "text" className = "form-control" onChange = {handleChange} name = 'caption' id = "caption" placeholder = "Enter Caption" value = {newpost.caption} required />
+    <input type = "text" className = "form-control" onChange = {handleChange} name = 'caption' id = "caption" placeholder = "Enter Caption for Meme" value = {newpost.caption} required />
     </div> 
     <div class = "form-group" >
     <label for = "url" > URL </label> 
-    <input type = "text" className = "form-control" onChange = {handleChange} name = 'url' id = "url" placeholder = "Enter URL" value = {newpost.url} required />
+    <input type = "text" className = "form-control" onChange = {handleChange} name = 'url' id = "url" placeholder = "Enter Meme URL" value = {newpost.url} required />
     </div> 
     <button type = "button" className = "btn btn-lg " name = "clicked" onClick = {postmeme} > Post </button> 
     </form>

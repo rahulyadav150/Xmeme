@@ -31,11 +31,12 @@ function handleChanges(event){
       
     }
     return (<form className='popup form'>
+         <h1> Edit Meme</h1>
          <label for='caption' > Caption </label><br />
         <input type='text' id='caption' onChange={handleChanges} name='caption' value={updated.caption} /> <br />
         <label for='url' > Url</label><br />
         <input type='text' id='url' onChange={handleChanges} name='url' value={updated.url}/><br />
-        <button type='button' onClick={patchrequest} className='btn btn-md'>Update</button>
+        <button type='button' onClick={patchrequest} className='btn btn-md'>Save Changes</button>
     </form>)
 
 }export default UpdateForm;
