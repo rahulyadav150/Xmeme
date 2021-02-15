@@ -18,12 +18,15 @@ function handleChanges(event){
   }
   /* For making Patch request to update Meme */
   function patchrequest(event)
-  {   
+  {   event.preventDefault();
       const backendUrl='https://stream-xmeme.herokuapp.com/memes/'+props._id;
    
       axios.patch(backendUrl,updated).then((res)=>{
         
-        
+         window.location=window.location;
+        })
+        .catch((err)=>{
+            alert("please use Valid url/caption");
         })
       
     }
@@ -32,7 +35,7 @@ function handleChanges(event){
         <input type='text' id='caption' onChange={handleChanges} name='caption' value={updated.caption} /> <br />
         <label for='url' > Url</label><br />
         <input type='text' id='url' onChange={handleChanges} name='url' value={updated.url}/><br />
-        <button type='submit' onClick={patchrequest} className='btn btn-md'>Update</button>
+        <button type='button' onClick={patchrequest} className='btn btn-md'>Update</button>
     </form>)
 
 }export default UpdateForm;

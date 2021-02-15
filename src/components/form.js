@@ -19,6 +19,7 @@ function Form(props) {
 
   // For sending request To server For create A meme //
   function postmeme(event) {
+    event.preventDefault();
     const backendUrl = 'https://stream-xmeme.herokuapp.com/memes';
     const postdata = {
       name: newpost.name,
